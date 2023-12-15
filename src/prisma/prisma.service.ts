@@ -1,5 +1,6 @@
 import { INestApplication, Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { Prisma, PrismaClient } from '@prisma/client';
+
 import extension from 'prisma-paginate';
 
 @Injectable()

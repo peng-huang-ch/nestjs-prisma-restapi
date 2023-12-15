@@ -13,11 +13,12 @@ async function bootstrap() {
   app.useLogger(app.get(Logger));
   app.disable('x-powered-by');
 
-  const options = new DocumentBuilder().setTitle('nestjs-prisma - service').setVersion('1.0').build();
+  const options = new DocumentBuilder().setTitle('nestjs-prisma - API description').setVersion('1.0').build();
 
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('docs', app, document);
 
   await app.listen(13000);
 }
+
 bootstrap();
